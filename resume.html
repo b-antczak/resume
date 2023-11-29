@@ -1,13 +1,594 @@
 <html>
 
 <head>
+  <link href="https://fonts.googleapis.com/css?family=Lora:400, 400i, 700, 700i&display=swap" rel="stylesheet">
+  <meta charset="utf8">
+  <title>Bartosz Antczak Resume</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;800;900&display=swap');
 
+    @font-face {
+      font-family: hankenGrotesk;
+      src: url('./Hanken_Grotesk/HankenGrotesk-VariableFont_wght.ttf');
+    }
+
+    @font-face {
+      font-family: libreBaskerville;
+      src: url('./Libre_Baskerville/LibreBaskerville-Regular.ttf');
+    }
+
+    @font-face {
+      font-family: notoSerif;
+      ;
+      src: url('./Noto_Serif/NotoSerif;-VariableFont_wdth\,wght.ttf');
+    }
+
+    .libre {
+      font-family: libreBaskerville;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      /* font-family: 'Lora', serif; */
+      font-family: 'Noto Serif', serif;
+      /* hankenGrotesk; */
+      /* 'nantes', georgia, serif; */
+      /* font-weight: 500; */
+      /* font-size: 7px; */
+      /* background: rgb(241, 241, 241); */
+      -webkit-print-color-adjust: exact;
+      box-sizing: border-box;
+    }
+
+    li {
+      font-size: 10px;
+    }
+
+    .hanken {
+      font-family: hankenGrotesk;
+      /* font-family:  'Noto Serif', serif; */
+      /* font-family: 'nantes', georgia, serif; */
+      letter-spacing: 0.05;
+    }
+
+    .page {
+      position: relative;
+      height: 11in;
+      width: 8.5in;
+      display: block;
+      border: 1px solid black;
+      background: #fff;
+      page-break-after: auto;
+      padding: 0.5in;
+      box-sizing: border-box;
+      /* margin: 50px; */
+      overflow: hidden;
+    }
+
+    @media print {
+      body {
+        background: black;
+      }
+
+      .page {
+        margin: 0;
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+
+
+    h1 {
+      /* name */
+      margin-top: 0rem;
+      margin-bottom: 0rem;
+      font-size: 3.2rem;
+      font-weight: 300;
+      letter-spacing: -2;
+      /* font-weight: 600; */
+      /* letter-spacing: -.05em; */
+      /* color: rgb(45, 109, 168); */
+      color: #00796b;
+      /* opacity: 0.9; */
+    }
+
+    section {
+      /* font-family: hankenGrotesk; */
+      font-family: 'Noto Serif', serif;
+      border-top: 1px solid rgba(0, 0, 0, 0.534);
+      width: 100%;
+      padding-bottom: 16px;
+    }
+
+    h2 {
+      /* section headings */
+      /* ... */
+      /* font-family: hankenGrotesk; */
+      font-size: 18px;
+      color: rgba(0, 0, 0, 0.87);
+      letter-spacing: 0.1;
+      font-weight: 500;
+      margin: 16px 0;
+    }
+
+    h3 {
+      /* titles / skills */
+    }
+
+    h4 {
+      /* bullet points */
+    }
+
+    .divider {
+      width: 100%;
+      /* flex: 0.99; */
+      border-bottom: 1px solid rgba(0, 0, 0, 0.54);
+      /* border-bottom: 1px solid #522da8a9; */
+    }
+
+
+    /* old stoof below ******************* */
+
+    .bottom {
+      position: absolute;
+      left: 5mm;
+      right: 5mm;
+      bottom: 5mm;
+    }
+
+    .group {
+      margin-top: 3mm;
+    }
+
+    .line {
+      color: white;
+      position: relative;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    .logo {
+      position: relative;
+      width: 80%;
+      left: 10%;
+      top: 15%;
+    }
+
+    .title {
+      margin-top: 0rem;
+      margin-bottom: 0rem;
+      font-size: 3.2rem;
+      font-weight: 300;
+      letter-spacing: -2;
+      /* font-weight: 600; */
+      /* letter-spacing: -.05em; */
+      /* color: rgb(45, 109, 168); */
+      color: #00796b;
+      /* opacity: 0.9; */
+    }
+
+    .flex {
+      display: flex;
+    }
+
+    .justify-center {
+      align-items: baseline;
+    }
+
+    .text {
+      letter-spacing: 0.05;
+      font-size: 12px;
+      font-weight: 400;
+    }
+
+    .black-54 {
+      color: rgba(0, 0, 0, 0.54);
+    }
+
+    .black-87 {
+      color: rgba(0, 0, 0, 0.87);
+    }
+
+    .company {
+      font-size: 0.8rem;
+      /* font-weight: 500; */
+      font-weight: 700;
+      /* color: rgb(45, 109, 168); */
+      color: #00796b;
+    }
+
+    .primary {
+      color: rgba(0, 0, 0, 0.87);
+    }
+
+    .secondary {
+      color: #00796b;
+    }
+
+
+
+    h1,
+    p {
+      padding: 0rem;
+      margin: 0rem;
+    }
+
+    .ph1 {
+      padding-right: 0.5rem;
+      padding-left: 0.5rem;
+    }
+
+    .pv2 {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+
+    .pv1 {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+
+    .heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .baseline {
+      align-items: center;
+    }
+
+    .space-between {
+      justify-content: space-between;
+    }
+
+    .heading p {
+      color: rgba(0, 0, 0, 0.54);
+      /* color: #512DA8; */
+      /* opacity: 0.8; */
+      font-weight: 500;
+      font-size: 1.2rem;
+      letter-spacing: 0.1;
+    }
+
+    .green {
+      color: #00796b;
+    }
+
+    .subheading {
+      /* letter-spacing: 0.15; */
+      font-size: 12px;
+      /* color: #00796b; */
+      /* color: rgba(0, 0, 0, 0.87) */
+    }
+
+    .purple {
+      /* color: rgb(45, 109, 168); */
+      color: #00796b;
+    }
+
+    .heading div {
+      width: 80%;
+      flex: 0.99;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.54);
+      /* border-bottom: 1px solid #522da8a9; */
+    }
+
+    .pl1 {
+      padding-left: 1rem
+    }
+
+    .semi-bold {
+      font-weight: 500;
+    }
+
+    .tr {
+      text-align: right;
+    }
+
+    li:not(:first-child) {
+      padding-top: 0.15rem;
+    }
+
+    li {
+      font-weight: 400;
+      font-size: 12px;
+      letter-spacing: 0.05;
+      /* font-family: hankenGrotesk; */
+      /* 'Roboto', sans-serif; */
+      line-height: 1.2;
+      /* letter-spacing: .01em; */
+    }
+
+    .caption {
+      color: rgba(0, 0, 0, 0.87);
+      font-weight: 400;
+      font-size: 12px;
+      padding-top: 2px;
+      letter-spacing: 0.05;
+    }
+
+    ul {
+      margin-top: 0.5rem;
+      color: rgba(0, 0, 0, 0.54);
+      width: 90%
+    }
+
+    .job-title {
+      font-weight: 500;
+    }
+
+    .black-70 {
+      color: rgba(0, 0, 0, 0.7);
+    }
   </style>
 </head>
 
 <body>
+  <div class="page">
+    <div class='flex space-between baseline' style="padding-bottom: 16px">
+      <h1>
+        Bartosz Antczak
+      </h1>
+      <div class='black-87 tr'>
+        <!-- <p class="text">
+            <a style='color:rgba(0, 0, 0, 0.87)' class='text' href='https://bartoszantczak.com/#/'
+              target='_blank'>www.bartoszantczak.com</a>
+          </p> -->
+        <p class='text' style='margin: 0.1rem 0'>
+          <a style='color:rgba(0, 0, 0, 0.87)' href='mailto:b.antczak55@gmail.com'>b.antczak55@gmail.com</a>
+        </p>
+        <p class='text'>
+          <a style='color:rgba(0, 0, 0, 0.87)' href='https://github.com/b-antczak'
+            target='_blank'>github.com/b-antczak</a>
+        </p>
+      </div>
+    </div>
 
+    <!-- Skills -->
+    <section>
+      <h2>Skills</h2>
+      <div class='flex'>
+        <!-- TODO: use hanken as primary text. Only serif for sections? -->
+        <div class='subheading secondary hanken'>
+          <p>Languages</p>
+          <p style='margin: 0.1rem 0'>Frameworks / Tools</p>
+          <!-- <p>Databases</p> -->
+        </div>
+        <div class='pl1 text hanken'>
+          <p>
+            Typescript, Python 3.7, Java 8, Bash
+          </p>
+          <p style='margin: 0.1rem 0'>
+            React 16.8, React-Native, Ember, Mobx, Node.js, Android SDK
+          </p>
+          <!-- <p>
+            SQL, Firebase API
+          </p> -->
+        </div>
+      </div>
+    </section>
+    <!-- Experience -->
+    <section>
+      <h2>Experience</h2>
+      <!-- Experience wrapper -->
+      <div style="display: flex; flex-direction: column; gap: 16px;">
+        <!-- FE II @ Faire -->
+        <div class="hanken">
+          <div class="flex space-between text">
+            <div class='flex job-title'>
+              <!-- <p class='subheading'>
+                  Frontend Engineer II
+                </p>
+                &nbsp;
+                <p class="black-70">&ndash; Faire</p> -->
+              <!-- <p class="green">Frontend Engineer II &ndash; Faire, Waterloo ON</p> -->
+              <p class="green"><b>Frontend Engineer II</b> &vert; Faire, Waterloo ON</p>
+            </div>
+          </div>
+          <p class='caption'>
+            Aug 2023 &ndash; Nov 2023
+          </p>
+          <ul class='black-87'
+            style="border-left: 0px solid #00796b;margin-left: 1rem;padding-left: 23px;margin-bottom: 0rem;">
+            <!-- I :
+        - researched and devised a design doc regarding a new charting library
+        - Implemented
+        - TOOK OWNESHIP OF significant FEATURE for early-stage react-native project intended to assist developers who are on-call
+       -->
+            <!-- <li>Took ownership of new charting feature for early-stage React-Native project by conducting research and writing a design doc regarding its implementation details, designing the code architecture, and approving all pull requests related to this feature</li> -->
+            <!-- <li>Conducted research on identifying which solution to implement for prototype app's charting feature</li> -->
+            <li> Vivamus ac dapibus orci, in cursus diam. Integer bibendum arcu est, cursus scelerisque augue ultricies
+              a. Sed vel dolor id purus malesuada aliquam vitae in est.</li>
+          </ul>
+        </div>
+        <!-- FE @ Faire -->
+        <div class="hanken">
+          <div class="flex space-between text">
+            <div class='flex job-title ' style="font-weight: 500;">
+              <!-- <p class='subheading'>
+                  Frontend Engineer II
+                </p>
+                &nbsp;
+                <p class="black-70">&ndash; Faire</p> -->
+              <p class="green"><b>Frontend Engineer</b> &vert; Faire, Waterloo ON</p>
+              <!-- <p class="green">Frontend Engineer &ndash; Faire, Waterloo ON</p> -->
+            </div>
+          </div>
+          <p class='caption'>
+            June 2020 &ndash; Aug 2023
+          </p>
+          <ul class='black-87'
+            style="border-left: 0px solid #00796b;margin-left: 1rem;padding-left: 23px;margin-bottom: 0rem;">
+            <!-- I :
+        - researched and devised a design doc regarding a new charting library
+        - Implemented
+        - TOOK OWNESHIP OF significant FEATURE for early-stage react-native project intended to assist developers who are on-call
+       -->
+            <!-- <li>Took ownership of new charting feature for early-stage React-Native project by conducting research and writing a design doc regarding its implementation details, designing the code architecture, and approving all pull requests related to this feature</li> -->
+            <!-- <li>Conducted research on identifying which solution to implement for prototype app's charting feature</li> -->
+            <li> Donec tempor vel ligula ullamcorper dignissim.
+              Morbi leo arcu, egestas non velit vitae, ultrices consectetur justo.</li>
+            <li> Phasellus
+              bibendum risus id diam aliquet, vel mattis eros vulputate.
+              Vivamus sed magna sit amet libero pulvinar mollis curabitur consectetur purus ex, et condimentum ante
+              interdum eu.
+            </li>
+            <li> Nullam quis lacus et mi
+              faucibus consequat et at mi. Etiam lacinia enim porttitor interdum iaculis.</li>
+            <li> Pharetra magna et velit egestas, a elementum quam consequat. Suspendisse pharetra ligula leo, a posuere
+              dolor sagittis pretium.</li>
+          </ul>
+        </div>
+        <!-- Sumo intern -->
+        <div class='hanken'>
+          <div class="flex space-between text">
+            <div class='flex job-title ' style="font-weight: 500;">
+              <!-- <p class='subheading'>
+                  Frontend Engineer II
+                </p>
+                &nbsp;
+                <p class="black-70">&ndash; Faire</p> -->
+              <p class="green">
+                <b>Mobile Engineering Intern</b> &vert; Sumo Logic, Redwood City CA
+              </p>
+            </div>
+          </div>
+          <p class='caption'>
+            Sept 2019 &ndash; Dec 2019
+          </p>
+          <ul class='black-87'
+            style="border-left: 0px solid #00796b;margin-left: 1rem;padding-left: 23px;margin-bottom: 0rem;">
+            <li>Took ownership of new charting feature for early-stage React-Native project by conducting research and
+              writing a design doc regarding its implementation details, designing the code architecture, and
+              approving
+              all pull requests related to this
+              feature
+            </li>
+          </ul>
+        </div>
+
+
+        <!-- <div>
+            <div class='flex job-title text' style="font-weight: bold;">
+              <p class='subheading'>
+                Frontend Engineering Intern
+              </p>
+              &nbsp;
+              <p>&ndash; Sumo Logic, Redwood City, CA</p>
+            </div>
+            <p class='caption text' style="font-size: 0.7rem">
+              Sept 2019 - Dec 2019
+            </p>
+            <ul style="border-left: 0px solid #00796b;margin-left: 1rem;padding-left: 23px;margin-bottom: 0rem;">
+              <li> Fusce dui lectus, mollis eget tortor nec, tempus ultrices ligula. Nulla facilisi. Morbi id libero eu
+                libero
+                dapibus ornare. Donec mollis vitae erat nec laoreet</li>
+              <li> Fusce dui lectus, mollis eget tortor nec, tempus ultrices ligula. Nulla facilisi. Morbi id libero eu
+                libero
+                dapibus ornare. Donec mollis vitae erat nec laoreet</li>
+            </ul>
+          </div> -->
+        <!-- Schonfeld intern -->
+        <div class='hanken'>
+          <div class="flex space-between text">
+            <div class='flex job-title ' style="font-weight: 500;">
+              <!-- <p class='subheading'>
+                  Frontend Engineer II
+                </p>
+                &nbsp;
+                <p class="black-70">&ndash; Faire</p> -->
+              <p class="green">
+                <b>Backend Engineering Intern</b> &vert; Schonfeld, New York City NY
+              </p>
+            </div>
+          </div>
+          <p class='caption'>
+            Jun 2019 &ndash; Aug 2019
+          </p>
+          <ul class='black-87'
+            style="border-left: 0px solid #00796b;margin-left: 1rem;padding-left: 23px;margin-bottom: 0rem;">
+            <li>Wrote server monitoring script executed via cron job which sends Slack alerts whenever disk space
+              surpasses a given threshold, <b>preventing 3 crashes</b> during two-month period</li>
+            <!-- <li>Presented research outlining the ideal </li> -->
+            <!-- <li>Prevented company from hiring third-party to transition all employee data from Clubhouse to JIRA by writing my own migration script, saving the company <b>$20,000 US</b></li> -->
+            <!-- INITIATED PROJECT FOR TRANSITION SCRIPT. MANAGED HANDOFF ONCE INTERNSHIP CONCLUDED -->
+            <li>Saved the company <b>$20,000 US</b> by preventing them from hiring third-party to transition all
+              employee
+              data from Clubhouse to JIRA by writing my own migration script</li>
+            <li>Created new microservice that allocates data from the Github and JIRA APIs and converts it to a format
+              readable by Grafana in order to visualize and track team's productivity</li>
+
+          </ul>
+        </div>
+
+
+
+        <!-- <div>
+            <div class='flex job-title text' style="font-weight: bold;">
+              <p class='subheading'>
+                Backend Engineering Intern
+              </p>
+              &nbsp;
+              <p>at Schonfeld, New York City, NY</p>
+            </div>
+            <p class='caption text' style="font-size: 0.7rem">
+              June 2019 - Aug 2019
+            </p>
+            <ul style="border-left: 0px solid #00796b;margin-left: 1rem;padding-left: 23px;margin-bottom: 0rem;">
+              <li> Fusce dui lectus, mollis eget tortor nec, tempus ultrices ligula. Nulla facilisi. Morbi id libero eu
+                libero
+                dapibus ornare. Donec mollis vitae erat nec laoreet</li>
+              <li> Fusce dui lectus, mollis eget tortor nec, tempus ultrices ligula. Nulla facilisi. Morbi id libero eu
+                libero
+                dapibus ornare. Donec mollis vitae erat nec laoreet</li>
+            </ul>
+          </div> -->
+      </div>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <div class='hanken'>
+        <div class="flex space-between text">
+          <div class='flex job-title ' style="font-weight: 500;">
+            <!-- <p class='subheading'>
+                Frontend Engineer II
+              </p>
+              &nbsp;
+              <p class="black-70">&ndash; Faire</p> -->
+            <p class="subheading secondary">
+              <b>Honours Bachelor of Computer Science</b> &vert; University of Waterloo, Waterloo ON
+            </p>
+          </div>
+        </div>
+        <p class='caption'>
+          Sept 2015 &ndash; Apr 2020
+        </p>
+
+      </div>
+
+    </section>
+
+    <section>
+      <h2>Interests & Hobbies</h2>
+      <div class='flex black-87 text hanken'>
+        Track and field (competed for 7 years), chess, collecting
+        LEGO models, Rush the band</p>
+      </div>
+      <!-- <ul>
+          <li>
+            Track and field (competed for 7 years), public speaking, collecting LEGO models, Rush the band
+          </li>
+        </ul> -->
+    </section>
+
+  </div>
 </body>
 
 </html>
