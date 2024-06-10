@@ -57,12 +57,9 @@
         }
       }
 
+      /* Reduce spacing between final bullet point and next section. */
       ul:last-child {
-        margin-bottom: 0;
-
-        li {
-          padding-bottom: 0;
-        }
+        margin-bottom: 4px;
       }
 
       /* Job title and Skills group. */
@@ -82,22 +79,22 @@
     }
 
     /* Name. */
-    h1 {
-      font-size: 48px;
-      font-weight: 300;
-      margin: 0;
-      line-height: 48px;
-      letter-spacing: -0.8;
-      text-align: left;
-      word-wrap: normal;
-      color: rgba(0, 0, 0, 0.75);
-    }
-
     .header {
       width: 100%;
       justify-content: space-between;
       align-items: center;
       padding-bottom: 0.2in;
+
+      h1 {
+        font-size: 48px;
+        font-weight: 300;
+        margin: 0;
+        line-height: 48px;
+        letter-spacing: -0.8;
+        text-align: left;
+        word-wrap: normal;
+        color: rgba(0, 0, 0, 0.67);
+      }
     }
 
     a {
@@ -112,7 +109,6 @@
     .light {
       font-weight: 400;
     }
-
 
     .row {
       display: flex;
@@ -140,7 +136,7 @@
       <div class="row">
         <div>
           <h4>Languages</h4>
-          <!-- Do this intead of defining whole new class for left padding. -->
+          <!-- Manually add space intead of defining whole new class for left padding. -->
           <h4>Frameworks / Tools &ensp;</h4>
           <h4>Standards</h4>
         </div>
