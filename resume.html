@@ -16,15 +16,14 @@
       margin: 0;
       padding: 0;
       font-family: "STIX Two Text", serif;
+      font-size: 13px;
     }
 
     section {
       border-top: 1px solid rgba(0, 0, 0, 0.52);
       width: 100%;
       color: #00796b;
-      font-size: 13px;
       padding-bottom: 0.15in;
-      /* Original is around 1.3 */
       line-height: 1.33;
 
       /* Section title. */
@@ -36,11 +35,10 @@
         letter-spacing: -0.1;
       }
 
-      /* Job titles and bullet points. */
+      /* Job location, title, and duration. */
       h4,
       p {
         margin: 0;
-        /* Original letter spacing is 0. */
         letter-spacing: 0.05;
       }
 
@@ -76,13 +74,9 @@
     }
 
     ul,
-    h2 {
+    h2,
+    a {
       color: rgba(0, 0, 0, 0.82);
-    }
-
-    /* All other regular text. */
-    .text {
-      font-weight: 400;
     }
 
     .bold {
@@ -93,13 +87,8 @@
       font-weight: 400;
     }
 
-    .flex {
-      display: flex;
-    }
-
     .page {
       background: #fff;
-      /* border: 1px solid black; */
       box-sizing: border-box;
       display: block;
       height: 11in;
@@ -128,13 +117,7 @@
     }
 
     a {
-      align-self: flex-end;
-      color: rgba(0, 0, 0, 0.82);
-      font-size: 13px;
-    }
-
-    .primary {
-      color: rgba(0, 0, 0, 0.82);
+      text-align: end;
     }
   </style>
 </head>
@@ -151,14 +134,14 @@
     </div>
     <section>
       <h2>Skills</h2>
-      <div class="flex">
+      <div class="row">
         <div>
           <h4>Languages</h4>
           <!-- Do this intead of defining whole new class for left padding. -->
           <h4>Frameworks / Tools &ensp;</h4>
           <h4>Standards</h4>
         </div>
-        <div class="text">
+        <div class="light">
           <p>
             Typescript 5.2, Python 3.9, Java 11, Kotlin 1.7, SQL, Bash
           </p>
@@ -176,8 +159,8 @@
       <h2>Experience</h2>
 
       <h4>Faire <span class="light">&ndash; Waterloo, ON</span></h4>
-      <h4>Software Engineer II<span class="light text">, August 2023 - November 2023 (3 months)</span></h4>
-      <h4>Software Engineer I<span class="light text">, June 2020 - August 2023 (3 years, 2 months)</span></h4>
+      <h4>Software Engineer II<span class="light ">, August 2023 - November 2023 (3 months)</span></h4>
+      <h4>Software Engineer I<span class="light ">, June 2020 - August 2023 (3 years, 2 months)</span></h4>
       <ul>
         <li>Led a multi-month project to redesign the filters and recommendations interface within the brand portal CRM,
           resulting
@@ -209,14 +192,14 @@
       </ul>
 
       <h4>Sumo Logic <span class="light">&ndash; Redwood City, CA</span></h4>
-      <h4>Mobile Engineering Intern<span class="light text">, September 2019 - December 2019 (4 months)</span></h4>
+      <h4>Mobile Engineering Intern<span class="light">, September 2019 - December 2019 (4 months)</span></h4>
       <ul>
         <li>Independently implemented data charting feature using react-native-svg library for experimental React-Native
           app and acted as principal reviewer on all relevant feature requests.</li>
       </ul>
 
       <h4>Schonfeld <span class="light">&ndash; New York City, NY</span></h4>
-      <h4>Backend Engineering Intern<span class="light text">, June 2019 - August 2019 (3 months)</span></h4>
+      <h4>Backend Engineering Intern<span class="light">, June 2019 - August 2019 (3 months)</span></h4>
       <ul>
         <li>Independently wrote disk-space monitoring script, resulting in <b>7</b> hours more server uptime during a
           two-month period.</li>
@@ -231,7 +214,7 @@
     <section>
       <h2>Education</h2>
       <h4>University of Waterloo <span class="light">&ndash; Waterloo, ON</span></h4>
-      <h4>Bachelor of Computer Science<span class="light text">, September 2015 - April 2020</span></h4>
+      <h4>Bachelor of Computer Science<span class="light">, September 2015 - April 2020</span></h4>
     </section>
 
     <section>
