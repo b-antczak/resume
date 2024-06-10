@@ -17,66 +17,84 @@
       padding: 0;
       font-family: "STIX Two Text", serif;
       font-size: 13px;
+      background-color: #ffffff;
+    }
+
+    .page {
+      height: 11in;
+      width: 8.5in;
+      box-sizing: border-box;
+      display: block;
+      overflow: hidden;
+      page-break-after: auto;
+      position: relative;
+      padding: 0.5in;
+      background-color: transparent;
     }
 
     section {
-      border-top: 1px solid rgba(0, 0, 0, 0.52);
       width: 100%;
-      color: #00796b;
-      padding-bottom: 0.15in;
       line-height: 1.33;
+      padding-bottom: 0.15in;
+      border-top: 1px solid rgba(0, 0, 0, 0.52);
 
       /* Section title. */
       >h2 {
-        /* font-family: 'Hanken Grotesk', sans-serif; */
         font-weight: 500;
-        font-size: 18px;
+        font-size: 20px;
         margin-top: 0.15in;
-        letter-spacing: -0.1;
-      }
-
-      /* Job location, title, and duration. */
-      h4,
-      p {
-        margin: 0;
-        letter-spacing: 0.05;
-      }
-
-      p {
-        color: rgba(0, 0, 0, 0.82);
-      }
-
-      h4 {
-        font-weight: 600;
+        letter-spacing: 0.1;
+        color: #00796b;
       }
 
       >ul {
-        letter-spacing: 0.05;
+        max-width: 93%;
+
+        li {
+          padding-bottom: 3px;
+          letter-spacing: 0;
+          color: rgba(0, 0, 0, 0.64);
+        }
       }
 
-      /* li:not(:last-child) { */
-      li {
-        padding-bottom: 3px;
+      /* Job title and Skills group. */
+      h4 {
+        font-weight: 600;
+        margin: 0;
+        letter-spacing: 0.05;
+        color: rgba(0, 0, 0, 0.75);
+      }
+
+      /* Interests and Skills content. */
+      p {
+        margin: 0;
+        letter-spacing: 0;
+        color: rgba(0, 0, 0, 0.64);
       }
     }
 
     /* Name. */
     h1 {
-      /* font-family: 'Hanken Grotesk', sans-serif; */
-      color: #00796b;
-      font-size: 52px;
+      font-size: 48px;
       font-weight: 300;
       margin: 0;
       line-height: 48px;
       letter-spacing: -1;
       text-align: left;
       word-wrap: normal;
+      color: rgba(0, 0, 0, 0.75);
     }
 
-    ul,
-    h2,
+    .header {
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 0.2in;
+    }
+
     a {
-      color: rgba(0, 0, 0, 0.82);
+      text-align: end;
+      color: rgba(0, 0, 0, 0.75);
     }
 
     .bold {
@@ -87,17 +105,6 @@
       font-weight: 400;
     }
 
-    .page {
-      background: #fff;
-      box-sizing: border-box;
-      display: block;
-      height: 11in;
-      overflow: hidden;
-      page-break-after: auto;
-      padding: 0.5in;
-      position: relative;
-      width: 8.5in;
-    }
 
     .row {
       display: flex;
@@ -107,24 +114,12 @@
       display: flex;
       flex-direction: column;
     }
-
-    /* Name in header. */
-    .fullWidth {
-      width: 100%;
-      justify-content: space-between;
-      align-items: center;
-      padding-bottom: 0.2in;
-    }
-
-    a {
-      text-align: end;
-    }
   </style>
 </head>
 
 <body>
   <div class="page">
-    <div class="row fullWidth">
+    <div class="row header">
       <h1>Bartosz Antczak</h1>
       <div class="column">
         <a href="mailto:b.antczak55@gmail.com">b.antczak55@gmail.com</a>
@@ -159,8 +154,8 @@
       <h2>Experience</h2>
 
       <h4>Faire <span class="light">&ndash; Waterloo, ON</span></h4>
-      <h4>Software Engineer II<span class="light ">, August 2023 - November 2023 (3 months)</span></h4>
-      <h4>Software Engineer I<span class="light ">, June 2020 - August 2023 (3 years, 2 months)</span></h4>
+      <h4>Software Engineer II<span class="light secondary">, August 2023 - November 2023 (3 months)</span></h4>
+      <h4>Software Engineer I<span class="light secondary">, June 2020 - August 2023 (3 years, 2 months)</span></h4>
       <ul>
         <li>Led a multi-month project to redesign the filters and recommendations interface within the brand portal CRM,
           resulting
